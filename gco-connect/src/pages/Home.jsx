@@ -2,6 +2,7 @@ import ServiceCard from "../components/ServiceCard"
 import paraverseIcon from "../assets/icon-paraverse.svg"
 import gcoConnect from "../assets/logo-gco-connect.svg"
 import NavBar from "../components/NavBar"
+import HomeSection from "../components/HomeSection"
 
 function Home() {
     const services = [
@@ -29,6 +30,19 @@ function Home() {
 
     return <div>
         <NavBar />
+
+        <HomeSection />
+
+        {/* <section className="home">
+            <div>
+                <h1>Start Your Journey Towards Wellbeing</h1>
+                <p>A seamless way to manage your appointments, including interviews, counseling, consultations, and psychological test administration.</p>
+            </div>
+            <div>
+                <a href="#booking" className="book-btn">Book Now</a>
+            </div>
+
+        </section> */}
         
         {/* <section className="services" id="services">
         <div className="services-grid">

@@ -1,9 +1,15 @@
 import paraverseIcon from "../assets/icon-paraverse.svg";
 import gcoConnect from "../assets/logo-gco-connect.svg";
-import profilePic from "../assets/profile-pic.png"
+import profilePic from "../assets/profile-pic.svg"
+import profilePicHover from "../assets/profile-pic-hover.svg"
 import bell from "../assets/bell.svg"
+import bellHover from "../assets/bell-hover.svg"
+import { useState } from "react";
 
 function NavBar() {
+    const [bellSrc, setBellSrc] = useState(bell);
+    const [profilePicSrc, setProfilePicSrc] = useState(profilePic);
+
     return <header className="header">
         <div className="left-icons">
             <a className="paraverse-icon">
@@ -14,17 +20,23 @@ function NavBar() {
             </a>
         </div>
 
-        <nav className="navbar">
-            <a href="#services">Services</a>
-            <a href="#appointments">Appointments</a>
-            <a href="#history">History</a>
-            <a href="#booking" className="book-btn">Book Now</a>
-        </nav>
+        <div className="right-side">
+            <div className="navbar-and-book">
+                <nav className="navbar">
+                    <a href="#services">Services</a>
+                    <a href="#appointments">Appointments</a>
+                    <a href="#history">History</a>
+                </nav>
 
-        <div className="right-icons">
-            <a href="#notifications"><img src={bell} /></a>
-            <a href="#profile"><img src={profilePic} /></a>
+                <a href="#booking" className="book-btn">Book Now</a>
+            </div>
+            
+            <div className="right-icons">
+                <a href="#notifications" className="bell" onMouseEnter={() => setBellSrc(bellHover)} onMouseLeave={() => setBellSrc(bell)}><img src={bellSrc} alt ="Notifications"/></a>
+                <a href="#profile" onMouseEnter={() => setProfilePicSrc(profilePicHover)} onMouseLeave={() => setProfilePicSrc(profilePic)}><img src={profilePicSrc} alt="Profile Settings"/></a>
+            </div>
         </div>
+        
     </header>
 }
 

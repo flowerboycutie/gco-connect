@@ -16,6 +16,7 @@
 html {
     font-size: 60%;
     overflow-x: hidden;
+    /* margin-top: 15vh; */
 }
 
 body {
@@ -33,8 +34,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
     gap: 20px;
     padding: 3rem;
+    z-index: 99999999999;
 }
 
 .left-icons {
@@ -44,6 +47,24 @@ body {
 
 .paraverse-icon img, .gco-connect-icon img {
     height: 50px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.gco-connect-icon img:hover, .paraverse-icon img:hover {
+    transform: scale(1.05);
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navbar-and-book {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
 
 .navbar a {
@@ -60,10 +81,98 @@ body {
     border-bottom: 3px solid var(--main-color);
 }
 
-.right-icons a {
-    gap: 30px;    
+.book-btn {
+    align-items: center;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(
+        270deg,
+        #d67083 10%,
+        #DD435E 100%
+    );
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    text-wrap: nowrap;
+    color: white !important;
+}
+
+.right-icons {
+    display: flex;
+    gap: 3rem;  
+    align-items: center;  
 }
 
 .right-icons a img {
     height: 50px;
+}
+
+.bell img {
+    height: 25px !important;
+}
+
+.home {
+    /* padding-top: 5vh; */
+    padding-left: 10rem;
+    padding-right: 3rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home h1 {
+    font-size: 4rem;
+    color: var(--text-color);
+    align-items: center;
+}
+
+.home p {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    text-align: right;
+    align-items: flex-end;
+    padding-bottom: 7rem;
+}
+
+.home-text-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.home-btns {
+    display: flex;
+    gap: 3rem;
+}
+
+.home-right img {
+    border-radius: 50%;
+    scale: 0.7;
+}
+
+.learn-btn {
+    align-items: center;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    background: #EDEDED;
+    border-radius: 3rem;
+    letter-spacing: 1px;
+    border: none;
+    text-wrap: nowrap;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book-btn:hover, .learn-btn:hover {
+    transform: scale(1.05);
 }
