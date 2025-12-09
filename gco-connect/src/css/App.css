@@ -30,7 +30,7 @@ body {
     height: 15%;
     top: 0%;
     left: 0%;
-    background-color: #EDEDED;
+    background-color: #F5E3E6;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,7 +83,7 @@ body {
 
 .book-btn {
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
     background: linear-gradient(
@@ -91,7 +91,7 @@ body {
         #d67083 10%,
         #DD435E 100%
     );
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
     border: none;
@@ -119,17 +119,40 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('../assets/feuBg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.762);
+    z-index: 1;
+}
+
+.home > * {
+    position: relative;
+    z-index: 2;
 }
 
 .home h1 {
-    font-size: 4rem;
-    color: var(--text-color);
+    font-size: 6.5rem;
+    color: white;
     align-items: center;
 }
 
 .home p {
     font-size: 2rem;
-    color: var(--text-color);
+    color: white;
 }
 
 .home-left {
@@ -138,6 +161,7 @@ body {
     gap: 5rem;
     text-align: right;
     align-items: flex-end;
+    padding-top: 3rem;
     padding-bottom: 7rem;
 }
 
@@ -155,15 +179,23 @@ body {
 .home-right img {
     border-radius: 50%;
     scale: 0.7;
+    box-shadow: 0 0 25px var(--text-color);
+    transition: 0.3s ease-in-out;
 }
+
+/* .home-right img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+} */
 
 .learn-btn {
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     padding: 1rem 2rem;
-    background: #EDEDED;
+    background: #F5E3E6;
     border-radius: 3rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     border: none;
     text-wrap: nowrap;
     color: var(--text-color);
@@ -173,6 +205,9 @@ body {
 
 .book-btn:hover, .learn-btn:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
 }
 
 .services {
@@ -194,7 +229,7 @@ body {
 }
 
 .services h1 {
-    font-size: 4rem;
+    font-size: 6.5rem;
     color: var(--text-color);
     align-items: center;
 }
@@ -258,7 +293,8 @@ body {
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: #EDEDED;
+    background-color: #dd435f1e;
+    
 }
 
 .footer img {
@@ -267,13 +303,13 @@ body {
 
 .footer h3 {
     font-size: 2rem;
-    color: gray;
+    color: #8d8183;
     letter-spacing: 1px;
 }
 
 .footer p {
     font-size: 1.3rem;
-    color: gray;
+    color: #8d8183;
     letter-spacing: 0.5px;
     max-width: 95ch ;
 }
