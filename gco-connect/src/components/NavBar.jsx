@@ -24,11 +24,11 @@ function NavBar() {
             <div className="navbar-and-book">
                 <nav className="navbar">
                     <a href="#services">Services</a>
-                    <a href="#appointments">Appointments</a>
-                    <a href="#history">History</a>
+                    <a href="https://paraverse.feutech.edu.ph/gco-connect/appointments" target = "_blank">Appointments</a>
+                    <a href="https://paraverse.feutech.edu.ph/gco-connect/history" target = "_blank">History</a>
                 </nav>
 
-                <a href="#booking" className="book-btn">Book Now</a>
+                <a href="https://paraverse.feutech.edu.ph/gco-connect/booking" target = "_blank" className="book-btn">Book Now</a>
             </div>
             
             <div className="right-icons">

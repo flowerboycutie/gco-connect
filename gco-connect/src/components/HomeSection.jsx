@@ -9,8 +9,8 @@ function HomeSection() {
                     <p>A seamless way to manage your appointments, including interviews, counseling, consultations, and psychological test administration.</p>
                 </div>
                 <div className="home-btns">
-                    <a href="#booking" className="book-btn">Book Now</a>
-                    <a href="#learnMore" className="learn-btn">Learn More</a>
+                    <a href="https://paraverse.feutech.edu.ph/gco-connect/booking" target = "_blank" className="book-btn">Book Now</a>
+                    <a href="#services" className="learn-btn">Learn More</a>
                 </div>
             </div>
             <div className="home-right">

@@ -1,7 +1,7 @@
 function ServiceCard({service}) {
     return (
         <div className="service-card">
-            <div className="service-header">
+            <div className="service-card-header">
                 <img src={service.icon} alt={service.name} />
                 <h3>{service.name}</h3>
             </div>
