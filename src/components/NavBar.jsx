@@ -12,9 +12,15 @@ function NavBar() {
 
     return <header className="header">
         <div className="left-icons">
-            <a className="paraverse-icon">
-                <img src={paraverseIcon} alt="Paraverse Icon" />
-            </a>
+            <div className="paraverse-menu">
+                <a className="paraverse-icon">
+                    <img src={paraverseIcon} alt="Paraverse Icon" />
+                </a>
+                <div className="paraverse-dropdown">
+                    <p>Paraverse Applications</p>
+                </div>
+            </div>
+
             <a href="#home" className="gco-connect-icon">
                 <img src={gcoConnect} alt="GCO Connect Icon" />
             </a>

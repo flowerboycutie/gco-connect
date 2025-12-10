@@ -55,6 +55,44 @@ body {
     transform: scale(1.05);
 }
 
+.paraverse-menu {
+    position: relative;
+}
+
+.paraverse-dropdown {
+    display: none;
+    position: absolute;
+    top: 118%;
+    left: 0;
+    min-width: 500px;
+    background-color: white;
+    border-radius: 0.5rem;
+    flex-direction: column;
+}
+
+.paraverse-menu:hover .paraverse-dropdown {
+    display: flex;
+}
+
+.paraverse-menu::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 25px;
+    left: 0;
+    background: transparent;
+}
+
+.paraverse-dropdown p {
+    padding-top: 2rem;
+    padding-left: 3rem;
+    /* padding-right: 90rem; */
+    padding-bottom: 10rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
 .right-side {
     display: flex;
     align-items: center;
@@ -111,6 +149,8 @@ body {
 
 .bell img {
     height: 25px !important;
+    position: relative;
+    z-index: 1000;
 }
 
 .profile-menu {
@@ -120,7 +160,7 @@ body {
 .profile-dropdown {
     display: none;
     position: absolute;
-    top: 120%;
+    top: 118.6%;
     right: 0;
     background-color: white;
     border-radius: 0.5rem;
@@ -159,10 +199,11 @@ body {
 }
 
 .notification-dropdown {
-    display: none;
+    display: none; 
+    /* fixxxx */
     position: absolute;
     top: 180%;
-    right: 0;
+    right: -50%;
     background-color: white;
     border-radius: 0.5rem;
     flex-direction: column;
@@ -175,18 +216,22 @@ body {
 .notification-menu::after {
     content: '';
     position: absolute;
-    top: 0%;
-    left: -115%;
-    width: 210%;
-    height: 50px;
-    background: transparent    ;
-    z-index: 998;
+    top: -40%;
+    left: -50%;
+    width: 50px;
+    height: 70px;
+    background: transparent;
+    z-index: 898;
 }
 
 .notification-dropdown p {
-    padding: 1rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 40rem;
+    padding-bottom: 10rem;
     color: var(--text-color);
     font-size: 1.5rem;
+    text-align: left;
 }
 
 .home {
