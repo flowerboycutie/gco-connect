@@ -32,7 +32,12 @@ function NavBar() {
             </div>
             
             <div className="right-icons">
-                <a href="#notifications" className="bell" onMouseEnter={() => setBellSrc(bellHover)} onMouseLeave={() => setBellSrc(bell)}><img src={bellSrc} alt ="Notifications"/></a>
+                <div className="notification-menu">
+                    <a href="#notifications" className="bell" onMouseEnter={() => setBellSrc(bellHover)} onMouseLeave={() => setBellSrc(bell)}><img src={bellSrc} alt ="Notifications"/></a>
+                    <div className="notification-dropdown">
+                        <p>Notifications</p>
+                    </div>
+                </div>
                 <div className="profile-menu">
                    <a href="#profile" onMouseEnter={() => setProfilePicSrc(profilePicHover)} onMouseLeave={() => setProfilePicSrc(profilePic)}><img src={profilePicSrc} alt="Profile Settings"/></a>
                    <div className="profile-dropdown">

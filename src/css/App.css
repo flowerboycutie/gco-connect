@@ -113,6 +113,82 @@ body {
     height: 25px !important;
 }
 
+.profile-menu {
+    position: relative;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: white;
+    border-radius: 0.5rem;
+    min-width: 150px;
+    flex-direction: column;
+}
+
+.profile-menu:hover .profile-dropdown {
+    display: flex;
+}
+
+.profile-menu::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: transparent;
+    z-index: 999;
+}
+
+.profile-dropdown a {
+    padding: 1rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.profile-dropdown a:hover {
+    border-radius: 0.5rem;
+    background-color: #f0f0f0;
+}
+
+.notification-menu {
+    position: relative;
+}
+
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    top: 180%;
+    right: 0;
+    background-color: white;
+    border-radius: 0.5rem;
+    flex-direction: column;
+}
+
+.notification-menu:hover .notification-dropdown {
+    display: flex;
+}
+
+.notification-menu::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -115%;
+    width: 210%;
+    height: 50px;
+    background: transparent    ;
+    z-index: 998;
+}
+
+.notification-dropdown p {
+    padding: 1rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
 .home {
     padding-left: 10rem;
     padding-right: 3rem;
@@ -264,7 +340,9 @@ body {
     background-color: var(--main-color);
     border-radius: 2rem;
     padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 0 10px var(--text-color);
+                /* 0 0 50px var(--text-color); */
+                /* 0 0 100px var(--text-color);   */
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
