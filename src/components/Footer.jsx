@@ -1,7 +1,7 @@
 import gcoConnectIcon from "../assets/logo-gco-connect.svg"
 
 function Footer() {
-    return <section className="footer">
+    return <footer className="footer">
         <div className="footer-left">
             <img src={gcoConnectIcon} alt="GCO Connect" />
             <h3>Start your journey towards wellbeing</h3>
@@ -10,7 +10,7 @@ function Footer() {
         <div className="footer-right">
             <p>Proudly made with ❤️<br />&copy; 2025 Mark Marvin Dizon | All Rights Reserved</p>
         </div>
-    </section>
+    </footer>
 }
 
 export default Footer

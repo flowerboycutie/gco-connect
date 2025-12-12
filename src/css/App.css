@@ -16,7 +16,7 @@
 html {
     font-size: 60%;
     overflow-x: hidden;
-    /* margin-top: 15vh; */
+    margin-top: 7vh;
 }
 
 body {
@@ -45,13 +45,16 @@ body {
     gap: 1.5rem;
 }
 
-.paraverse-icon img, .gco-connect-icon img {
+.paraverse-icon img, .gco-connect-icon img, .gco-connect-icon-small img {
     height: 50px;
     transition: 0.3s ease-in-out;
-
 }
 
-.gco-connect-icon img:hover, .paraverse-icon img:hover {
+.gco-connect-icon-small {
+    display: none;
+}
+
+.gco-connect-icon img:hover, .paraverse-icon img:hover, .gco-connect-icon-small img:hover {
     transform: scale(1.05);
 }
 
@@ -66,7 +69,8 @@ body {
     left: 0;
     min-width: 500px;
     background-color: white;
-    border-radius: 0.5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
     flex-direction: column;
 }
 
@@ -85,10 +89,9 @@ body {
 }
 
 .paraverse-dropdown p {
-    padding-top: 2rem;
-    padding-left: 3rem;
+    padding: 2rem;
     /* padding-right: 90rem; */
-    padding-bottom: 10rem;
+    /* padding-bottom: 10rem; */
     color: var(--text-color);
     font-size: 1.5rem;
 }
@@ -119,7 +122,7 @@ body {
     border-bottom: 3px solid var(--main-color);
 }
 
-.book-btn {
+.book-btn-navbar, .book-btn-home {
     align-items: center;
     font-size: 2.5rem;
     padding: 1rem 2rem;
@@ -163,7 +166,8 @@ body {
     top: 118.6%;
     right: 0;
     background-color: white;
-    border-radius: 0.5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
     min-width: 150px;
     flex-direction: column;
 }
@@ -184,13 +188,14 @@ body {
 }
 
 .profile-dropdown a {
-    padding: 1rem;
+    padding: 2rem;
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .profile-dropdown a:hover {
     border-radius: 0.5rem;
+    border-radius: 2rem;
     background-color: #f0f0f0;
 }
 
@@ -200,12 +205,13 @@ body {
 
 .notification-dropdown {
     display: none; 
-    /* fixxxx */
     position: absolute;
     top: 180%;
     right: -50%;
+    min-width: 500px;
     background-color: white;
-    border-radius: 0.5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
     flex-direction: column;
 }
 
@@ -225,17 +231,34 @@ body {
 }
 
 .notification-dropdown p {
-    padding-top: 2rem;
-    padding-left: 3rem;
-    padding-right: 40rem;
-    padding-bottom: 10rem;
+    padding: 2rem;
+    /* padding-right: 40rem; */
+    /* padding-bottom: 10rem; */
     color: var(--text-color);
     font-size: 1.5rem;
     text-align: left;
 }
 
+.notification-dropdown a {
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+}
+
+.notification-dropdown a:hover {
+    color: var(--main-color);
+    /* border-bottom: 3px solid var(--main-color); */
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
 .home {
-    padding-left: 10rem;
+    padding-left: 3rem;
     padding-right: 3rem;
     display: flex;
     flex-direction: row;
@@ -246,7 +269,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    gap: 15rem;
 }
 
 .home::before {
@@ -274,6 +297,7 @@ body {
 .home p {
     font-size: 2rem;
     color: white;
+    max-width: 50ch;
 }
 
 .home-left {
@@ -282,8 +306,8 @@ body {
     gap: 5rem;
     text-align: right;
     align-items: flex-end;
-    padding-top: 3rem;
-    padding-bottom: 7rem;
+    /* padding-top: 3rem;
+    padding-bottom: 3rem; */
 }
 
 .home-text-body {
@@ -299,7 +323,7 @@ body {
 
 .home-right img {
     border-radius: 50%;
-    scale: 0.7;
+    width: 32vw;
     box-shadow: 0 0 25px var(--text-color);
     transition: 0.3s ease-in-out;
 }
@@ -324,7 +348,7 @@ body {
     cursor: pointer;
 }
 
-.book-btn:hover, .learn-btn:hover {
+.book-btn-navbar:hover, .book-btn-home:hover, .learn-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
@@ -445,6 +469,85 @@ body {
 }
 
 .footer-right {
-    padding-top: 3rem;
+    padding: 50px 0;
     text-align: right;
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.profile-dropdown-content {
+    display: none;
+}
+
+@media (max-width: 1285px) {
+    #menu-icon, .profile-dropdown-content {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 84.2%;
+        right: 0;
+        width: 50%;
+        padding: 2rem;
+        text-align: right;
+        background-color: white;
+        border: 2px solid var(--main-color);
+        border-radius: 2rem;
+        /* border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color); */
+        display: none;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .book-btn-navbar, .gco-connect-icon, .profile-menu {
+        display: none;
+    }
+
+    .gco-connect-icon-small {
+        display: flex;
+    }
+
+    .paraverse-dropdown, .notification-dropdown {
+        min-width: 250px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .home-left {
+        text-align: center;
+        align-items: center;
+        /* padding-left: 0; */
+        padding-top: 0%;
+    }
+
+    /* .home-right img {
+        scale: 0.5;
+    } */
+
+    .services-headings {
+        text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }
