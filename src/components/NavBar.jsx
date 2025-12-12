@@ -17,6 +17,7 @@ function NavBar() {
     const [profilePicSrc, setProfilePicSrc] = useState(profilePic);
 
     const menuRef = useRef(null);
+    const menuIconRef = useRef(null);
     
     const toggleMenu = () => {
         setIsMenuActive(!isMenuActive);
@@ -25,7 +26,7 @@ function NavBar() {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (menuRef.current &&  !menuRef.current.contains(event.target)) {
+            if (menuRef.current &&  !menuRef.current.contains(event.target) && event.target !== menuIconRef.current) {
                 setIsMenuActive(false);
                 setMenuSrc(menuIcon);
             }
@@ -96,6 +97,7 @@ function NavBar() {
             </div>
 
             <img 
+                ref={menuIconRef}
                 src={menuSrc} 
                 alt="Menu Icon" 
                 id="menu-icon"
