@@ -18,6 +18,11 @@ function NavBar() {
 
     const menuRef = useRef(null);
     const menuIconRef = useRef(null);
+
+    const scrollToTop = (e) => {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
     
     const toggleMenu = () => {
         setIsMenuActive(!isMenuActive);
@@ -48,14 +53,14 @@ function NavBar() {
                     <img src={paraverseIcon} alt="Paraverse icon" />
                 </a>
                 <div className="paraverse-dropdown">
-                    <p>Paraverse Applications  <hr /></p>
+                    <p><b>Paraverse Applications</b></p><hr />
                 </div>
             </div>
 
-            <a href="#home" className="gco-connect-icon">
+            <a href="#" onClick = {scrollToTop} className="gco-connect-icon">
                 <img src={gcoConnect} alt="GCO Connect icon" />
             </a>
-            <a href="#home" className="gco-connect-icon-small">
+            <a href="#" onClick = {scrollToTop} className="gco-connect-icon-small">
                 <img src={gcoConnectSmall} alt="GCO Connect icon" />
             </a>
         </div>
@@ -68,8 +73,8 @@ function NavBar() {
                     <a href="https://paraverse.feutech.edu.ph/gco-connect/history" target = "_blank" onClick={toggleMenu}>History</a>
                     <div className="profile-dropdown-content">
                         <hr />
-                        <a href="#">My Profile</a>
-                        <a href="#">Portal</a>
+                        <a href="https://paraverse.feutech.edu.ph/gco-connect/account" target="_blank">My Profile</a>
+                        <a href="https://paraverse.feutech.edu.ph/portal/" target="_blank">Portal</a>
                         <a href="#">Sign Out</a>
                     </div>
                 </nav>
@@ -81,15 +86,15 @@ function NavBar() {
                 <div className="notification-menu">
                     <a className="bell" onMouseEnter={() => setBellSrc(bellHover)} onMouseLeave={() => setBellSrc(bell)}><img src={bellSrc} alt ="Notifications"/></a>
                     <div className="notification-dropdown">
-                        <p>Notifications <hr /></p>
+                        <p><b>Notifications</b></p><hr /> 
                         <a href="Sample Notif">Sample Notification</a>
                     </div>
                 </div>
                 <div className="profile-menu">
                    <a href="#profile" onMouseEnter={() => setProfilePicSrc(profilePicHover)} onMouseLeave={() => setProfilePicSrc(profilePic)}><img src={profilePicSrc} alt="Profile Settings"/></a>
                    <div className="profile-dropdown">
-                        <a href="#">My Profile</a>
-                        <a href="#">Portal</a>
+                        <a href="https://paraverse.feutech.edu.ph/gco-connect/account" target="_blank">My Profile</a>
+                        <a href="https://paraverse.feutech.edu.ph/portal/" target="_blank">Portal</a>
                         <a href="#">Sign Out</a>
                    </div>
                 </div>
