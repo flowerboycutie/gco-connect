@@ -1,16 +1,39 @@
-# React + Vite
+# GCO Connect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page for GCO Connect, a counseling and wellbeing service platform at FEU Tech. This React application provides an intuitive interface for students to explore services, book appointments, and access resources.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: React 
+- **Styling**: CSS
+- **Assets**: SVG and PNG images
+- **Build Tool**: Vite
+- **Version Control**: Git
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/gco-connect.git
+   cd gco-connect
+   ```
 
-## Expanding the ESLint configuration
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser to view the app.
+
+4. **Build for Production**:
+   ```bash
+   npm run build
+   ```
+   
+---
+
+**Credits**: Proudly made with ❤️ by Mark Marvin Dizon. © 2025 All Rights Reserved.
