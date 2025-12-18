@@ -10,7 +10,6 @@ import menuIcon from "../assets/menu-icon.png"
 import x from "../assets/x.png"
 
 function NavBar() {
-    // const [gcoSrc, setGcoSrc] = useState(gcoConnect); 
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [menuSrc, setMenuSrc] = useState(menuIcon);
     const [bellSrc, setBellSrc] = useState(bell);

@@ -536,8 +536,6 @@ body {
     .paraverse-dropdown, .notification-dropdown {
         min-width: 250px;
         max-width: 85vw;
-        /* left: 50%; */
-        /* transform: translateX(-50%); */
         right: auto;
     }
 
